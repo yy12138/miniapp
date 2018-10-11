@@ -71,3 +71,19 @@ watch: {
 }
 ```
 
+vue object 在赋值的给另个一个变量的时候，如果变量需要添加属性，则需在最原始赋值的对象添加这个属性，否则将丢失Observer
+
+js获取当前url 的相对路径
+
+```
+var url = document.location.toString();
+var arrUrl = url.split("//");
+var start = arrUrl[1].indexOf("/");
+var relUrl = arrUrl[1].substring(start);
+if(relUrl.indexOf("?") != -1){
+  relUrl = relUrl.split("?")[0];
+}
+return relUrl;
+```
+
+
